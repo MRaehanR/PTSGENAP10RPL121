@@ -19,9 +19,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getEmail = (EditText)findViewById(R.id.email);
-        getPassword = (EditText)findViewById(R.id.password);
-        btnLogin = (Button)findViewById(R.id.btnLogin);
+        getEmail = (EditText) findViewById(R.id.email);
+        getPassword = (EditText) findViewById(R.id.password);
+        btnLogin = (Button) findViewById(R.id.btnLogin);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,18 +29,18 @@ public class MainActivity extends AppCompatActivity {
                 String email = getEmail.getText().toString();
                 String password = getPassword.getText().toString();
 
-                if(email.equalsIgnoreCase("raehan") && password.equalsIgnoreCase("123")){
+                if (email.equalsIgnoreCase("raehan") && password.equalsIgnoreCase("123")) {
                     Toast.makeText(MainActivity.this, "Anda Berhasil Login", Toast.LENGTH_SHORT).show();
-                    Intent moveDashboard = new Intent(MainActivity.this, DashboardActivity.class);
+                    Intent moveDashboard = new Intent(MainActivity.this, MakananActivity.class);
                     startActivity(moveDashboard);
-                }else{
+                } else {
                     Toast.makeText(MainActivity.this, "Anda gagal login", Toast.LENGTH_SHORT).show();
                 }
 
             }
         });
 
-        
+
     }
 
 }
